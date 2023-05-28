@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import css from './Searchbar.module.css';
-import { BiSearchAlt2} from 'react-icons/bi';
+import { BiSearchAlt2 } from 'react-icons/bi';
+import PropTypes from 'prop-types';
+
 class Searchbar extends Component {
   state = {
     q: '',
@@ -32,6 +34,10 @@ class Searchbar extends Component {
       </header>
     );
   }
+}
+
+Searchbar.propTypes = {
+  setQuery: PropTypes.func.isRequired,
 }
 
 export default Searchbar;
